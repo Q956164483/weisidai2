@@ -1,0 +1,247 @@
+@import "common/reset";
+@import "common/mixins";
+@import "common/color";
+@import "common/swiper";
+html,body{
+  color:#FFF;
+  width:100%;
+  font-size:14px;
+}
+ul{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+}
+.clearfix:after{
+  content: ".";     /**//*内容为“.”就是一个英文的句号而已。也可以不写。*/
+  display: block;   /**//*加入的这个元素转换为块级元素。*/
+  clear: both;     /**//*清除左右两边浮动。*/
+  visibility: hidden;      /**//*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+  line-height: 0;    /**//*行高为0；*/
+  height: 0;     /**//*高度为0；*/
+  font-size:0;    /**//*字体大小为0；*/
+}
+.clearfix{ *zoom:1;}   /**//*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+.fl{
+  float:left;
+}
+.fr{
+  float:right
+}
+.hide{
+  display:none;
+}
+.mw-p1200{
+  min-width:1200px;
+}
+.main-center{
+  width:1200px;
+  margin:0 auto;
+}
+.bg-size-cover{
+  @include bg-size(cover)
+}
+.ell{overflow: hidden;white-space: nowrap; text-overflow: ellipsis}
+/*头部*/
+.header-bg{
+  @include bg-image('../images/bg-header.png');
+  height:154px;
+  .header{
+    margin:0 auto;
+    height:154px;
+    .logo,.tel{
+      display:block;
+      position:relative;
+      top: 33px;
+    }
+    .tel{
+      top:42px;
+    }
+  }
+}
+.search-container{
+  margin-top:50px;
+  margin-left:160px;
+  width:436px;
+  .search{
+    height:36px;
+    width:436px;
+    border:1px solid $theme-bg;
+    background-color:#FFF;
+    input{
+      display:block;
+      width:300px;
+      padding-left:26px;
+      padding-right:26px;
+      border:none;
+      height:34px;
+      outline: none;
+    }
+    .search-btn{
+      height:100%;
+      width:84px;
+      font-size:16px;
+      text-align: center;
+      line-height:36px;
+      background-color:$theme-bg;
+      transition:all .333s;
+      &:hover{
+        cursor: pointer;
+        background-color:$theme-btn;
+      }
+    }
+  }
+  .search-hot-list{
+    list-style-type: none;
+    margin-top:10px;
+    li{
+      display:inline-block;
+      margin-right:20px;
+      color:#606060;
+      &:hover{
+        cursor: pointer;
+        color:$theme-color;
+      }
+    }
+  }
+}
+/*导航*/
+.nav{
+  height:52px;
+  background-color:$theme-bg;
+  font-size:16px;
+  .main-center{
+    height:100%;
+  }
+  .left{
+    position:relative;
+    line-height:52px;
+    transition: all .333s;
+    width:199px;
+    height:52px;
+    cursor:pointer;
+    background-color:$theme-btn;
+    text-align:center;
+    .icon-top{
+      transition: all .333s;
+      transform:rotate(180deg);
+    }
+    &:hover{
+      .icon-top{
+        transform:rotate(0)
+      }
+      .service{
+        display:block;
+      }
+    }
+    .service{
+      display:none;
+      position:absolute;
+      top:52px;
+      left:0;
+      padding-top:10px;
+      padding-bottom:10px;
+      color:$theme-bg;
+      list-style-type:none;
+      width:100%;
+      text-align:center;
+      background-color:rgba(255,255,255,.7);
+      .service-item{
+        line-height:42px;
+        transition:all .333s;
+        &:hover{
+          background-color:#ff4982;
+          color:#FFF;
+        }
+      }
+      .service-list{
+        padding-top:10px;
+        padding-bottom:10px;
+        height:336px;
+        position:absolute;
+        top:0;
+        left:199px;
+        width:324px;
+        background-color:#FFF;
+        .list-item{
+          line-height:42px;
+          width:50%;
+          color:#000;
+          text-align:center;
+          &:hover{
+            color:$theme-color;
+          }
+        }
+        .service-ask{
+          background-color:$theme-btn;
+          width:190px;
+          border-radius:6px;
+          height:40px;
+          line-height:40px;
+          color:#FFF;
+          margin:0 auto;
+          margin-top:30px;
+          img{
+            display:block;
+            margin:12px 10px 0 45px;
+          }
+          &:hover{
+            opacity:.9;
+          }
+        }
+      }
+    }
+  }
+  .right{
+    list-style-type: none;
+    height:52px;
+    .nav-item{
+      display:inline-block;
+      width:143px;
+      height:28px;
+      line-height:28px;
+      padding-top:12px;
+      padding-bottom:12px;
+      transition: all .333s;
+      &:hover{
+        background-color:$theme-btn;
+        a{
+          border-right:1px solid $theme-color;
+        }
+      }
+      &:last-child{
+        a{
+          border-right:1px solid rgba(0,0,0,0);
+         }
+      }
+      a{
+        color:#FFF;
+        display:block;
+        width:100%;
+        height:24px;
+        text-align:center;
+        border-right:1px solid $theme-btn;
+      }
+    }
+  }
+}
+.bg-content{
+  background-image:url('../images/bg-content.png')
+}
+.swiper-container{
+  img{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+}
+.more{
+  color:#b6b6b6;
+  font-size:20px;
+  display:block;
+  &:hover{
+    color:$theme-color;
+  }
+}

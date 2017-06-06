@@ -1,0 +1,23 @@
+@mixin keyframes($animation){
+  @-webkit-keyframes #{$animation} {
+    @content;
+  }
+  @keyframes #{$animation} {
+    @content;
+  }
+}
+
+@mixin bg-size($backgroundSize){
+  background-size:$backgroundSize;
+  background-repeat:no-repeat;
+  background-position:center;
+  display: block;
+}
+
+@mixin bg-image($url){
+  background-image: url($url);
+}
+
+
+
+
