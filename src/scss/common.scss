@@ -245,3 +245,49 @@ a{
     color:$theme-color;
   }
 }
+// 底部
+.footer{
+  height:150px;
+  background-color:#901e6e;
+  padding-left:10%;
+  padding-right:10%; 
+  display:flex;
+  align-items:center;
+  padding-bottom:10px;
+  .logo{
+    background-image: url('../images/icon-footer-logo.png');
+    width:262px;
+    height:99px;
+    background-size:cover;
+  }
+  .foot_cont{
+    margin-left:80px;
+    color:#e2b68a;
+    .mart20{
+      margin-top:20px;
+      a{
+        color:#e2b68a
+      }
+    }
+    .mart25{
+       margin-top:25px
+    }
+    .mart10{
+       margin-top:10px;
+    }
+  }
+  .QRcode{
+    margin-left:100px;
+    .QRcode_img{
+      background-image: url('../images/QRcode.png');
+      width:106px;
+      height:106px;
+      background-size:cover;
+      margin-top:20px;
+    }
+    .QRtxt{
+      margin-top:10px;
+      margin-left:25px;
+    }
+  }
+}

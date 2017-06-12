@@ -213,3 +213,33 @@ function deleteContentFromArr(Arr, content){
         }
     }
 }
+//公司介绍页面跳转
+ $(".company_list_cont").click(function(){
+        var index = $(this).index()+"";
+        switch(index){
+            case "0":
+            location.href="../company_introduction.html";
+            break;
+             case "1":
+            location.href="../environment.html";
+            break;
+             case "2":
+            location.href="../device.html";
+            break;
+             case "3":
+            location.href="news.html";
+            break;
+             case "4":
+            location.href="../expert.html";
+            break;
+             case "5":
+            location.href="../aesthetics_team.html";
+            break;
+             case "6":
+            location.href="../contact_us.html";
+            break;
+             case "7":
+            location.href="news.html";
+            break;
+        }
+    })
