@@ -195,8 +195,8 @@
                </div>
             </div>
             <div class=" fl" style="margin-left:15px;width:910px;height:1030px;overflow:auto">
-               <div style="overflow:hidden">
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+               <div style="overflow:hidden"> 
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -205,7 +205,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -214,7 +214,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -223,7 +223,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -232,7 +232,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -241,7 +241,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -290,6 +290,9 @@
         // $('#talk-qq').attr('href',url);
         // },2000);
       
+    })
+     $(".expert_list").click(function(){
+        location.href="expert_cover.html";
     })
     var caseSwiper = new Swiper('.swiper-expert', {
         autoplay : 3000,

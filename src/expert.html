@@ -202,7 +202,7 @@
                   <div style="width:104px;height:26px;color:#c33f9c;border-radius:5px;justify-content:center;align-items:center;display:flex;margin-bottom:10px">美容中医科</div>
                 </div>
                <div style="overflow:hidden">
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -211,7 +211,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -220,7 +220,16 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
+                       <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
+                       <div style="flex:1">
+                         <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
+                         <div style="color:black;margin:10px;line-height:25px">成都微时代医疗美容医形塑主任 医疗美容医院体形塑造中心主任</div>
+                         <div style="color:black;margin:10px;padding-bottom:10px;line-height:25px"><span style="color:#c33f9c">擅长：</span>吸脂术、乳房整形、脂肪移植。ppdo、脂肪抽吸、细胞辅助脂肪移植、面部年轻化、胸部整形、创面愈合、疤痕防治等。 </div>
+                         <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
+                       </div>
+                   </div> 
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -229,7 +238,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -238,16 +247,7 @@
                          <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
                        </div>
                    </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
-                       <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
-                       <div style="flex:1">
-                         <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
-                         <div style="color:black;margin:10px;line-height:25px">成都微时代医疗美容医形塑主任 医疗美容医院体形塑造中心主任</div>
-                         <div style="color:black;margin:10px;padding-bottom:10px;line-height:25px"><span style="color:#c33f9c">擅长：</span>吸脂术、乳房整形、脂肪移植。ppdo、脂肪抽吸、细胞辅助脂肪移植、面部年轻化、胸部整形、创面愈合、疤痕防治等。 </div>
-                         <div style="width:218px;height:27px;background-color:#c33f9c;margin:10px;color:#eeeeee;justify-content:center;align-items:center;display:flex">查看详情</div>
-                       </div>
-                   </div>
-                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex">
+                   <div style="width:437px;height:277px;float:left;margin:4px;display:flex" class="expert_list">
                        <img src="./images/hys.png" alt="" style="width:197px;height:262px;">
                        <div style="flex:1">
                          <div style="color:#962d77;;margin:10px;font-size:24px">黄毅生</div>
@@ -296,6 +296,9 @@
         // $('#talk-qq').attr('href',url);
         // },2000);
       
+    })
+    $(".expert_list").click(function(){
+        location.href="expert_cover.html";
     })
     var caseSwiper = new Swiper('.swiper-expert', {
         autoplay : 3000,
