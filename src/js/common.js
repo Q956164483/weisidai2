@@ -227,7 +227,7 @@ function deleteContentFromArr(Arr, content){
             location.href="../device.html";
             break;
              case "3":
-            location.href="news.html";
+            location.href="../news.html";
             break;
              case "4":
             location.href="../expert.html";
@@ -239,7 +239,7 @@ function deleteContentFromArr(Arr, content){
             location.href="../contact_us.html";
             break;
              case "7":
-            location.href="news.html";
+            location.href="../news.html";
             break;
         }
     })
