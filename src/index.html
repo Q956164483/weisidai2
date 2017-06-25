@@ -952,8 +952,119 @@
         // setInterval(function(){
         // $('#talk-qq').attr('href',url);
         // },2000);
-      
+       //getAll();
+       //getPlastic()
+       //getCase();
+       //getClassify();
+       //getProject();
+       //getProjectList();
+       //getProjectDetail();
     })
+    function getAll(){
+         AJAX({
+               url : 'index_image_list',
+               data : {
+                  "id":"22"
+               },
+               success : function(data){
+                   //alert('success>>>>>>>'+JSON.stringify(data));
+                   
+               }
+            });
+    }
+    function getPlastic(){
+         AJAX({
+               url : 'index_plastic_list',
+               data : {
+                  "id":"22"
+               },
+               success : function(data){
+                  // alert('success>>>>>>>'+JSON.stringify(data));
+                  
+               }
+            });
+    }
+    function getCase(){
+        AJAX({
+               url : 'index_plastic_case_get_top',
+               data : {
+                  "":""
+               },
+               success : function(data){
+                   //alert('success>>>>>>>'+JSON.stringify(data));
+                   var data = data.data; 
+                   var img = data[0].covers;
+                   alert(img) 
+                   
+               }
+            });
+    }
+    //获取整形分类
+     function getClassify(){
+        AJAX({
+               url : 'plastic_cate_get_tree',
+               data : {
+                  "":""
+               },
+               success : function(data){
+                  // alert('success>>>>>>>'+JSON.stringify(data));
+                   var data = data.data; 
+                   var len = data.length;
+                   for(var i = 0; i < len; i ++){
+                       var name = data[i].cate_name;
+                       var child = data[i].children;
+                       for(var j = 0; j < child.length; j++){
+                             var child_name = child[j].cate_name;
+                             
+                       }
+                   }
+                   
+               }
+            });
+    }
+    //获取项目推荐
+    function getProject(){
+         AJAX({
+               url : 'item_get_top',
+               data : {
+                  "":"" 
+               },
+               success : function(data){
+                   //alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
+    //获取项目列表
+    function getProjectList(){
+         AJAX({
+               url : 'item_get_list',
+               data : {
+                  "id":"1",//一级分类id
+                  "orders":"1" 
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
+    //获取项目详情
+    function getProjectDetail(){
+         AJAX({
+               url : 'item_get_details',
+               data : {
+                  "id":"6",//项目id
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
     var caseSwiper = new Swiper('.caseSwiper', {
         autoplay : 3000,
         speed:666,

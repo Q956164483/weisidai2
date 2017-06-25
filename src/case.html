@@ -8,6 +8,7 @@
     <title>求美案例</title>
 	<link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/case.css">
 </head>
 <body>
   <script>document.body.style.zoom = 1/window.devicePixelRatio</script>
@@ -116,43 +117,43 @@
   </div>
   <div class="container mw-p1200 bg-content">
     <div class="content main-center">
-        <div class="" style="height: 1388px">
-            <div class=" fl" style="width:260px">
-               <div style="background-color:#c33f9c;width:260px;height:135px;display:flex;align-items:center; justify-content:center;flex-direction:column">
-                   <div style="background-image:url(./images/case_img.png);height:25px;width:227px;"></div>
-                   <div style="font-size:30px;margin-top:10px">求美案例</div>
+        <div class="case_left_h">
+            <div class="fl f1_w">
+               <div class="title">
+                   <div class="img_wh"></div>
+                   <div class="txt">求美案例</div>
                </div>
-               <div style="width:260px;height:407px;display:flex;align-items:center; justify-content:center;">
-                   <div style="width:235px;height:100%;background-color:#f9f9f9;color:black;font-size:18px">
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;">
+               <div class="title_content">
+                   <div class="title_sty">
+                      <div class="t_list">
                           <div style="background-image: url('./images/news_no_icon.png');width:5px;height:9px;background-size:cover;margin-right:10px"></div>
-                          <div>眼部整形</div>
+                          <div>眼部整形</div> 
                       </div>
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;background-color:#ff4982">
+                      <div  class="t_list" style="background-color:#ff4982">
                           <div style="background-image: url('./images/news_check_icon.png');width:23px;height:23px;background-size:cover;margin-right:10px"></div>
                           <div>鼻部整形</div>
                       </div>
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;">
+                      <div class="t_list">
                           <div style="background-image: url('./images/news_no_icon.png');width:5px;height:9px;background-size:cover;margin-right:10px"></div>
                           <div>面部整形</div>
                       </div>
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;">
+                      <div class="t_list">
                           <div style="background-image: url('./images/news_no_icon.png');width:5px;height:9px;background-size:cover;margin-right:10px"></div>
                           <div>胸部整形</div>
                       </div>
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;">
+                      <div class="t_list">
                           <div style="background-image: url('./images/news_no_icon.png');width:5px;height:9px;background-size:cover;margin-right:10px"></div>
                           <div>吸脂减肥</div>
                       </div>
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;">
+                      <div class="t_list">
                           <div style="background-image: url('./images/news_no_icon.png');width:5px;height:9px;background-size:cover;margin-right:10px"></div>
                           <div>皮肤美容</div>
                       </div>
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;">
+                      <div class="t_list">
                           <div style="background-image: url('./images/news_no_icon.png');width:5px;height:9px;background-size:cover;margin-right:10px"></div>
                           <div>微整形</div>
                       </div>
-                      <div style="display:flex;height:50px;align-items:center;justify-content:center;">
+                      <div class="t_list">
                           <div style="background-image: url('./images/news_no_icon.png');width:5px;height:9px;background-size:cover;margin-right:10px"></div>
                           <div>牙齿美容</div>
                       </div>
@@ -372,8 +373,39 @@
         // setInterval(function(){
         // $('#talk-qq').attr('href',url);
         // },2000);
-      
+      // getAll();
+      // getDetail();
     })
+    //获取案例列表
+    function getList(){
+         AJAX({
+               url : 'plastic_case_get_list',
+               data : {
+                  "id":"22",
+                  "page":"1",
+                  "pagecut":"10"
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
+    //获取案例详情
+    function getDetail(){
+         AJAX({
+               url : 'plastic_case_get_details',
+               data : {
+                  "id":"22"
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
     var caseSwiper = new Swiper('.swiper-expert', {
         autoplay : 3000,
         speed:666,

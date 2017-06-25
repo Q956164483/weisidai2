@@ -3,7 +3,7 @@
  * @param {string} obj  请求参数
  */
 function AJAX(obj){
-    var baseUrl = 'http://10.0.5.164:6888/ormrpc/RestServer';
+    var baseUrl = 'http://testwwwvstyle.ufunet.cn/api/interfaces/';
     $.ajax({
         url : (baseUrl+obj.url),
         data : (obj.data?obj.data:''),

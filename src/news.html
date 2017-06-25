@@ -88,7 +88,7 @@
             </div>
             <ul class="right fr">
                 <li class="nav-item">
-                    <a href="index.html">网站首页</a>
+                    <a href="index.html" onclick="">网站首页</a>
                 </li>
                 <li class="nav-item">
                     <a href="company_introduction.html">公司介绍</a>
@@ -338,8 +338,56 @@
         // setInterval(function(){
         // $('#talk-qq').attr('href',url);
         // },2000);
-      
+       //getExpertRecommend();
+      // getList();
+       //getDetail();
     })
+    //获取专家推荐
+    function getExpertRecommend(){
+         AJAX({
+               url : 'doctors_get_top',
+               data : {
+                  "":""
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
+    //获取文档列表
+     function getList(){
+        AJAX({
+               url : 'article_get_list',
+               data : {
+                  "id":"1",
+                  "page":"1",
+                  "pagecut":"10"
+               },
+               success : function(data){
+                   //alert('success>>>>>>>'+JSON.stringify(data));
+                   var data = data.data; 
+                 
+                   
+               }
+            });
+    }
+    //获取文档详情
+     function getDetail(){
+        AJAX({
+               url : 'article_get_details',
+               data : {
+                  "id":"145"
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                   var data = data.data; 
+                 
+                   
+               }
+            });
+    }
     //点击新闻列表
     $(".new_list").click(function(){
       $("#new_details").css("display","inline");

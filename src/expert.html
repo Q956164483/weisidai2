@@ -295,8 +295,55 @@
         // setInterval(function(){
         // $('#talk-qq').attr('href',url);
         // },2000);
-      
+      //getExpert();
+      //getExpertList();
+      //getExpertDetail();
     })
+    //获取专家分类
+    function getExpert(){
+         AJAX({
+               url : 'plastic_case_get_details',
+               data : {
+                  "id":"22"
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
+    //获取专家列表
+    function getExpertList(){
+         AJAX({
+               url : 'doctors_get_list',
+               data : {
+                  "id":"22",
+                  "page":"1",
+                  "pagecut":"10"
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
+    //获取专家详情
+    function getExpertDetail(){
+         AJAX({
+               url : 'doctors_get_details',
+               data : {
+                  "id":"22" //专家id
+               },
+               success : function(data){
+                   alert('success>>>>>>>'+JSON.stringify(data));
+                  // var data = data.data; 
+                   
+               }
+            });
+    }
+    
     $(".expert_list").click(function(){
         location.href="expert_cover.html";
     })
